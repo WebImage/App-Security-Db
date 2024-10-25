@@ -1,0 +1,52 @@
+user:
+  plural: users
+  properties:
+    approved: boolean
+    approvedBy: '#user'
+    comment: text
+    created: dateTime
+    createdBy: '#user'
+    email: string(100)
+    enable: boolean
+    failedLoginAttempts: integer
+    id: integer
+    lastActivity: dateTime
+    lastLogin: dateTime
+    lastPasswordChanged: dateTime
+    password: string(255)
+    updated: dateTime
+    updatedBy: '#user'
+    username: "!string(100)"
+
+userProfile:
+  plural: userProfiles
+  properties:
+    autoload: boolean
+    created: dateTime
+    createdBy: '#user'
+    id: string(50)
+    update: dateTime
+    updatedBy: '#user'
+    user: '#user'
+    value: text
+  primaryKey:
+    - user
+    - id
+
+loginHistory:
+  plural: loginHistory
+  properties:
+    created: dateTime
+    createdBy: '#user'
+    id: integer
+    ip: string(50)
+    success: boolean
+    user: '#user'
+
+passwordHistory:
+  plural: passwordHistory
+  properties:
+    created: dateTime
+    createdBy: '#user'
+    id: integer
+    password: string(255)

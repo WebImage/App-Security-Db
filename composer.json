@@ -1,0 +1,17 @@
+{
+    "name": "webimage/app-security-db",
+    "description": "Plugin to add application security",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "WebImage\\Security\\Db\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robert Jones II",
+            "email": "rjones@corporatewebimage.com"
+        }
+    ],
+    "require": {}
+}

@@ -1,0 +1,39 @@
+permission:
+  plural: permissions
+  properties:
+    created: dateTime
+    id: string(30)
+    modified: dateTime
+    name: string(30)
+  primaryKey:
+    - id
+
+role:
+  plural: roles
+  properties:
+    autoLoad: boolean
+    created: dateTime
+    id: string(30)
+    modified: dateTime
+    name: string(30)
+  primaryKey:
+    - id
+
+rolePermission:
+  plural: rolePermissions
+  properties:
+    created: dateTime
+    modified: dateTime
+    role: '#role'
+    permission: '#permission'
+  primaryKey:
+    - role
+    - permission
+
+entityRole:
+  plural: entityRoles
+  properties:
+    created: dateTime
+    entity: string(30)
+    role: '#role'
+    modified: dateTime

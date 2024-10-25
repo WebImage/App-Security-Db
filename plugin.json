@@ -1,0 +1,9 @@
+{
+  "id": "webimage/security-db",
+  "name": "Security (DB Implementation)",
+  "version": "0.0.1",
+  "author": {
+    "name": "Robert Jones II",
+    "email": "rjones@corporatewebimage.com"
+  }
+}
