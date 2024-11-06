@@ -15,7 +15,7 @@ trait UserManagedEntityTrait
 
 	public function setCreatedBy(UserEntity $createdBy)
 	{
-		$this->getEntity()['createdBy'] = $createdBy;
+		$this->getEntity()['createdBy'] = $createdBy->getEntity();
 	}
 
 	public function getUpdatedBy(): ?UserEntity
@@ -25,6 +25,6 @@ trait UserManagedEntityTrait
 
 	public function setUpdatedBy(UserEntity $updatedBy)
 	{
-		$this->getEntity()['updatedBy'] = $updatedBy;
+		$this->getEntity()['updatedBy'] = $updatedBy->getEntity();
 	}
 }
